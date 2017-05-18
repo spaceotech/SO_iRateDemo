@@ -12,6 +12,9 @@
 		DEE93FC41ECDB69600427DE6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEE93FC21ECDB69600427DE6 /* Main.storyboard */; };
 		DEE93FC61ECDB69600427DE6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEE93FC51ECDB69600427DE6 /* Assets.xcassets */; };
 		DEE93FC91ECDB69600427DE6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEE93FC71ECDB69600427DE6 /* LaunchScreen.storyboard */; };
+		DEE93FE71ECDB93800427DE6 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DEE93FE31ECDB93800427DE6 /* Info.plist */; };
+		DEE93FE81ECDB93800427DE6 /* iRate.bundle in Resources */ = {isa = PBXBuildFile; fileRef = DEE93FE41ECDB93800427DE6 /* iRate.bundle */; };
+		DEE93FE91ECDB93800427DE6 /* iRate.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE93FE61ECDB93800427DE6 /* iRate.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,11 @@
 		DEE93FC51ECDB69600427DE6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DEE93FC81ECDB69600427DE6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DEE93FCA1ECDB69600427DE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DEE93FDE1ECDB90D00427DE6 /* iRateDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iRateDemo-Bridging-Header.h"; sourceTree = "<group>"; };
+		DEE93FE31ECDB93800427DE6 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DEE93FE41ECDB93800427DE6 /* iRate.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = iRate.bundle; sourceTree = "<group>"; };
+		DEE93FE51ECDB93800427DE6 /* iRate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iRate.h; sourceTree = "<group>"; };
+		DEE93FE61ECDB93800427DE6 /* iRate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iRate.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,12 +64,25 @@
 			children = (
 				DEE93FBE1ECDB69600427DE6 /* AppDelegate.swift */,
 				DEE93FC01ECDB69600427DE6 /* ViewController.swift */,
+				DEE93FE21ECDB93800427DE6 /* iRate */,
 				DEE93FC21ECDB69600427DE6 /* Main.storyboard */,
 				DEE93FC51ECDB69600427DE6 /* Assets.xcassets */,
 				DEE93FC71ECDB69600427DE6 /* LaunchScreen.storyboard */,
 				DEE93FCA1ECDB69600427DE6 /* Info.plist */,
+				DEE93FDE1ECDB90D00427DE6 /* iRateDemo-Bridging-Header.h */,
 			);
 			path = iRateDemo;
+			sourceTree = "<group>";
+		};
+		DEE93FE21ECDB93800427DE6 /* iRate */ = {
+			isa = PBXGroup;
+			children = (
+				DEE93FE31ECDB93800427DE6 /* Info.plist */,
+				DEE93FE41ECDB93800427DE6 /* iRate.bundle */,
+				DEE93FE51ECDB93800427DE6 /* iRate.h */,
+				DEE93FE61ECDB93800427DE6 /* iRate.m */,
+			);
+			path = iRate;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -96,6 +117,7 @@
 				TargetAttributes = {
 					DEE93FBA1ECDB69600427DE6 = {
 						CreatedOnToolsVersion = 8.2.1;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -123,8 +145,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DEE93FE71ECDB93800427DE6 /* Info.plist in Resources */,
 				DEE93FC91ECDB69600427DE6 /* LaunchScreen.storyboard in Resources */,
 				DEE93FC61ECDB69600427DE6 /* Assets.xcassets in Resources */,
+				DEE93FE81ECDB93800427DE6 /* iRate.bundle in Resources */,
 				DEE93FC41ECDB69600427DE6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -136,6 +160,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DEE93FE91ECDB93800427DE6 /* iRate.m in Sources */,
 				DEE93FC11ECDB69600427DE6 /* ViewController.swift in Sources */,
 				DEE93FBF1ECDB69600427DE6 /* AppDelegate.swift in Sources */,
 			);
@@ -258,10 +283,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = iRateDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.digicom.allinonewallpapers.iRateDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.digicom.allinonewallpapers;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "iRateDemo/iRateDemo-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -270,10 +298,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = iRateDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.digicom.allinonewallpapers.iRateDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.digicom.allinonewallpapers;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "iRateDemo/iRateDemo-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

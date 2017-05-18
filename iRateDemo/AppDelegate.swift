@@ -16,6 +16,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        iRate.sharedInstance().daysUntilPrompt = 5;
+        iRate.sharedInstance().usesUntilPrompt = 20;
+        iRate.sharedInstance().appStoreID = 981778637;
         return true
     }
 
